@@ -6,7 +6,7 @@
 .grid-container {
   display: grid;
   padding: 0.3em;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat (2, 50vh);
   grid-gap: 1em;
 }
@@ -14,6 +14,33 @@
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 5px;
-  padding-top:10;
+  padding-top: 10 px;
   font-size: 20px;
+}
+.pregunta {
+	font-size: 1.2em; 
+	padding: .3em;
+	width: 100%;
+}
+
+.respuesta {
+	font-size:1.05em; 
+	padding: .2em;
+	width: 96%;
+}
+
+.btn{
+	font-size: 19px;;
+	padding: .1em;
+	padding-top: .2em;
+	font-family: Arial;
+}
+input {
+	padding: .1em;
+}
+
+* {
+ font-size: 100%;
+ padding: .1em;
+ font-family: Arial;
 }

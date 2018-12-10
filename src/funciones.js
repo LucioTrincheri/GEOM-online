@@ -32,8 +32,8 @@ $(function(){
 $(function(){
     $('body').on('click', '#add_answer', function(){
 		var br= $('<br>');
-        var desc= $('<input type="text" name="respuesta' + this.value + '">');
-		var chebox= $('<input type="checkbox" name="checkbox' + this.value + '">');
+        var desc= $('<input type="text" class="respuesta" name="respuesta' + this.name + '-' + this.value +'">');
+		var chebox= $('<input type="checkbox" class="checkbox" value="checked" name="checkbox' + this.name + '-' + this.value + '">');
         var divi= $('<div id="divi">');
 		var lugar = "#container" + this.name;
 		
@@ -48,8 +48,8 @@ $(function(){
 $(function(){
     $('#add_question').on('click',function(){
 		var br= '<br></br>';
-        var desc= '<input type="text" name="pregunta' + this.value + '">';
-        var butt= '<button type= "button" id= "add_answer" value=1 name=' + this.value + ' >New Answer</button>';
+        var desc= '<input type="text" class="pregunta" "name="pregunta' + this.value + '">';
+        var butt= '<button type="button" class="btn" id="add_answer" value=1 name=' + this.value + ' >New Answer</button>';
 		var cosaturbia = '<div id= "container' + this.value + '"></div>';
 		var openDiv = '<div class="grid-item">';
 		var closeDiv = '</div>';
