@@ -12,6 +12,7 @@ $i = 1;
 $preguntas = [];
 
 echo "test";
+return true;
 /*
 while (isset($_POST['pregunta' . $i])){
 	$preg = [];

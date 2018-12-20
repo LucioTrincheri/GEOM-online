@@ -1,20 +1,61 @@
 $(function(){
-	$("#examen").submit(function(e) {
+	//$('body').on('click', '#submit', function(){
+	$('#submit').on('click',function(){
+	//$("#examen").on('submit', function(e) {
+		
+		$.ajax({
+			type: "post",
+			url: 'PHP/parser.php',
+			data: $('#examen').serialize(), // serializes the form's elements.
+			success: function(data) {
+				alert('is this even success?');
+				//alert(data); // datos devueltos por el script
+				console.log(data);
+			},
+			error: function(data) {
+				alert('is this even failure?');
+				//alert(data);
+				console.log(data);
+				//console.log('Submission was un-successful.');
+			}
+		
+		});
+		/*event.preventDefault();
+		event.preventDefault(e);
+		e.preventDefault();
+		$(e).preventDefault(); */
+	});
+});
 
-		e.preventDefault(); 
+/*
+$(function(){
+	//$('body').on('click', '#submit', function(){
+	//$('#submit').on('click',function(){
+	$("#examen").on('submit', function(e) {
 
 		$.ajax({
 			type: "post",
 			url: 'PHP/parser.php',
 			data: $(this).serialize(), // serializes the form's elements.
-			success: function(data) {
-				alert(data); // datos devueltos por el script
-				console.log('Submission was successful.');
+			success: function() {
+				alert('is this even success?');
+				//alert(data); // datos devueltos por el script
+				//console.log('Submission was successful.');
+			},
+			error: function() {
+				alert('is this even failure?');
+				//console.log('Submission was un-successful.');
 			}
+		
 		});
+		event.preventDefault();
+		event.preventDefault(e);
+		e.preventDefault();
+		$(e).preventDefault(); 
 	});
 });
 
+*/
 
 $(function(){
     $('body').on('click', '#add_answer', function(){
