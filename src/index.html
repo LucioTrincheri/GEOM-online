@@ -5,8 +5,13 @@
 <script src="funciones.js"></script>
 </head>
 <body>
+	<form id="examen">
 	<div id = "container" class="grid-container"></div>
-    <button value=1 id="add_question" class="btn">Add Question</button>
-	<br></br>
+	<button value=1 id="add_question" class="btn">Add Question</button> <br>
+	Cantidad de examenes a generar <input type="number" name="cantidad_examenes"> <br>
+	Cantidad de preguntas por examen <input type="number" name="cantidad_preguntas"> <br>
+	Mezclar preguntas entre examenes<input type="checkbox" value="checked" name="shuffle"> <br><br>
+	<input type="submit" name="submit" value="Submit">
+	</form>
 </body>
 </html>

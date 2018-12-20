@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "GEOM-online\\": "src"
+        }
+    },
+    "require": {
+        "symfony/yaml": "^4.1",
+        "twig/twig": "^2.0"
+    }
+}
